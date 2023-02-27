@@ -6,9 +6,7 @@
 if (isset($_POST['last_name']) && isset($_POST['first_name'])) {
     $lastName = $_POST['last_name'];
     $firstName= $_POST['first_name'];
-    if ($lastName != null && $firstName != null) {
         echo '私の名前は'.$lastName.$firstName.'です。';
-    }
 }
 ?>
 <!DOCTYPE html>
@@ -21,9 +19,9 @@ if (isset($_POST['last_name']) && isset($_POST['first_name'])) {
     <section>
     <form action='./debug01.php' method="post">
         <label>姓</label>
-        <input type="text" name="last_name"/>
+        <input type="text" name="last_name" required="required" />
         <label>名</label>
-        <input type="text" name="first_name" />
+        <input type="text" name="first_name" required="required" />
         <input type="submit" value="送信する"/>
     </form>
     </section>
